@@ -1,10 +1,10 @@
-import { Input } from "./Input";
-import { Button } from "./Button";
+import { Input } from "designSystem/Input/Input.component";
+import { Button } from "designSystem/Button/Button.component";
 
 import { useDispatch, useSelector } from 'react-redux';
-import type { AppDispatch } from '../redux/store';
-import type { RootState } from '../redux/store';
-import { setEmail, setPassword, submitForm } from '../redux/formSlice';
+import type { AppDispatch } from 'redux/store';
+import type { RootState } from 'redux/store';
+import { setEmail, setPassword, submitForm } from 'features/Auth/redux/authSlice';
 import React, { useCallback, useMemo } from 'react';
 import { useNavigate } from "react-router-dom";
 

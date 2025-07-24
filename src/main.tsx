@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import { store } from './redux/store.ts';
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { Dashboard } from './pages/Dashboard.tsx';
+import { Dashboard } from './features/Dashboard/Dashboard.component.tsx';
 
 const router = createBrowserRouter([
   {

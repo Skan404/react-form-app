@@ -1,18 +1,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
-import type { RootState } from './store';
-
-const fakeApiCall = (email: string, password: string): Promise<{message: string}> => {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            if (password === 'password123' && email.includes('@')) {
-                resolve({ message: 'Login successful' });
-            } else {
-                reject(new Error('Invalid password! Please try again.'));
-            }
-        }, 2000);
-    });
-};
+import type { RootState } from 'redux/store';
+import { fakeApiCall } from '../../../api/auth';
 
 export const submitForm = createAsyncThunk(
     'form/submitForm',

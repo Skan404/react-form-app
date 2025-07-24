@@ -1,4 +1,4 @@
-import { Form } from "./components/Form";
+import { Form } from "./features/Auth/components/Form.component";
 
 function App() {
     return (
